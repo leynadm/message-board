@@ -14,10 +14,16 @@
   </h1>
   <p>Welcome to <%= title %>
   </p>
+  <a href="/new">Add new message to the board</a>
   <ul>
-    <% messages.forEach((message)=> { %>
-      <li><%- message.text %> from <%- message.user %></li>
+    <% messages.forEach((message, index)=> { %>
+      <li><%- message.text %> from <%- message.user %>
+
+            <a href="/details/<%= index %>" target="_blank">Check details</a>
+
+      </li>
       <% }); %>
+
   </ul>
 
 </body>
